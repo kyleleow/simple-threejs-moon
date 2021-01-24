@@ -14,7 +14,7 @@ const material = new THREE.MeshBasicMaterial({ map: texture });
 const sphere = new THREE.Mesh(geometry, material);
 scene.add(sphere);
 scene.add(sphere);
-camera.position.z = 10;
+camera.position.z = 20;
 
 function animate() {
   requestAnimationFrame(animate); //renderer to draw scene every time screen refreshed
