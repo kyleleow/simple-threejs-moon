@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Simple ThreeJS Sphere</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    form {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      color: #fff;
+      font-family: sans-serif;
+      display: flex;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <label for="field-of-view">Field of View (1 - 180):</label>
+    <input type="range" id="field-of-view" min="1" max="180" step="1" oninput="updatePOV(this.value)">
+  </form>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"
+  integrity="sha512-jeYvJdyAYkpQCY/omvCYQo89qA5YxDW4JBT7COPsHT2sOAanwxkZRFeP9gc69b5reSDpZIoyCqZQZcWZkbB5Gw=="
+  crossorigin="anonymous"></script>
+<script src="app.js"></script>
+
+</html>
