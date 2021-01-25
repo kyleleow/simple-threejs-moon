@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background: url("./assets/galaxy.jpg");
+  /* background: url("https://unsplash.com/photos/svbDI1Pq30s/download?w=1920"); */
+  background-size: cover;
+}
+
+form {
+  width: 100%;
+  position: fixed;
+  bottom: 15px;
+  color: #fff;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+
+form input {
+  width: 200px;
+  margin-left: 15px;
+}

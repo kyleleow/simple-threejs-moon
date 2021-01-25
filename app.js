@@ -1,9 +1,13 @@
 //scene
 const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+const fov = 75;
+const aspect = window.innerWidth / window.innerHeight;
+const nearClip = 0.1;
+const farClip = 1000;
+const camera = new THREE.PerspectiveCamera(fov, aspect, nearClip, farClip);
 
 //renderer
-const renderer = new THREE.WebGLRenderer({antialias: true});
+const renderer = new THREE.WebGLRenderer({antialias: true, alpha: true});
 renderer.setSize(window.innerWidth, window.innerHeight); //set renderer to fill viewport
 document.body.appendChild(renderer.domElement);
 
@@ -18,8 +22,8 @@ camera.position.z = 20;
 
 function animate() {
   requestAnimationFrame(animate); //renderer to draw scene every time screen refreshed
-  sphere.rotation.x += 0.01;
-  sphere.rotation.y -= 0.01;
+  sphere.rotation.x += 0.003;
+  sphere.rotation.y -= 0.003;
   renderer.render(scene, camera);
 };
 
